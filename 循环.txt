@@ -1,0 +1,63 @@
+ 统计输入正数个数
+   import java.util.*;
+ 
+ public class Main {
+    int count = 0;
+  Scanner scanner = new Scanner(System.in);
+
+//极致压行处理
+ while(scanner.nextInt() > 0) count++;
+  System.out.println(count);
+  }
+}
+
+
+
+最小公倍数
+1,解题思路
+.首先计算m和n中的较大者,用max记录
+.然后利用循环,在max到m*n之间找最小公倍数
+.如果既能被m整除又能被n整除,说明是最小公倍数,直接返回
+
+import java.util.*;
+
+public static void main(String[] args) {
+ //标准输入
+  Scanner scanner = new scanner(System.in);
+  int m = console .nextInt();
+   int n = console.nextInt();
+    //计算最小公倍数
+    int result = getCM(m,n);
+ //输出结果
+  System.out.println(result);
+}
+
+//计算最小公倍数
+public static int getCM(int m,int n) {
+  //计算m,n中较大者
+  int max = Math.max(m,n);
+ //从max到m*n之间找最小公倍数
+for(int i = max;i<=m*n;i++) {
+ //如果既能被m整除又能被n整除,说明是最小公倍数,直接返回
+   if(i%m==0&&i%n==0) {
+  return i;
+   }
+ }
+ return -1;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
